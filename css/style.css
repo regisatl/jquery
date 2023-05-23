@@ -1,0 +1,129 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+:root {
+    --bgclr-base: #ccc;
+    --bgclr-h1-a: #dd5735;
+    --bgclr-button: #dd5735;
+    --bgclr-header-footer: #444444;
+    --bgclr-text-css-html: #3101ff;
+    --bgclr-text: #387d11;
+    --mxw: 1200px;
+    --fz: 1rem;
+    --ff: sans-serif;
+    --mbl: 5rem;
+    --bgclr-nav: #cbcbcb;
+    --pdg: 1rem 2rem;
+    --pdg-header-footer: 3rem;
+    --border-base: 1px solid #dd5735;
+    --clr: #fff;
+    --border-radius: 0.5rem;
+    --fw: 700;
+}
+
+body {
+    font-family: "Alexandria";
+    font-size: var(--fz);
+    background-color: var(--bgclr-base);
+}
+
+div.container {
+    max-width: var(--mxw);
+    margin-inline: auto;
+    margin-block: var(--mbl);
+    box-shadow: 0px 10px 10px 10px #0000009a;
+    border-radius: 0.5rem;
+}
+
+header.header,
+footer.footer {
+    background-color: var(--bgclr-header-footer);
+    padding: var(--pdg-header-footer);
+    text-align: center;
+}
+
+nav.button button {
+    display: block;
+}
+
+nav.button {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    background-color: var(--bgclr-nav);
+    border: 2px solid #646363cc;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+}
+
+h1,
+a {
+    text-decoration: none;
+    color: #dd5735;
+}
+
+header.header p,
+footer.footer p {
+    color: var(--bgclr-base);
+}
+
+button {
+    border: var(--border-base);
+    background-color: var(--bgclr-button);
+    color: var(--clr);
+    padding: var(--pdg);
+    border-radius: var(--border-radius);
+    font-weight: var(--fw);
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 1s;
+    box-shadow: 0px 10px 10px #0000009a;
+}
+
+button:hover {
+    background-color: var(--clr);
+    color: var(--bgclr-button);
+}
+
+div#sentence {
+    background-color: var(--clr);
+    padding: 2rem;
+    line-height: 1.5;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    overflow: hidden;
+}
+
+@media screen and (min-width:601px) and (max-width:1199px) {
+
+    div.container nav.button {
+        width: fit-content;
+        flex-direction: column;
+        margin-inline: auto;
+        border: none;
+    }
+
+    div.container {
+        max-width: 700px;
+        margin-inline: auto;
+    }
+}
+
+@media screen and (max-width:600px) {
+    nav.button {
+        width: fit-content;
+        flex-direction: column;
+        margin-inline: auto;
+        border: none;
+    }
+
+    div.container {
+        max-width: 300px;
+        margin-inline: auto;
+    }
+}
